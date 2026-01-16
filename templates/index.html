@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>HandsJS: Hand Gesture Tracker</title>
+    <link rel="stylesheet" href="static/style.css">
+
+  </head>
+    
+  <body>
+  <div class="container">
+  <h1>Hand Gesture Tracker</h1>
+  <div id="cameraContainer">
+    <video id="cameraFeed" autoplay playsinline></video>
+    <canvas id="handCanvas"></canvas>
+  </div>
+  <div class="controls">
+    <button id="startCamera">Start Camera</button>
+    <button id="switchCamera">Switch Camera</button>
+  </div>
+  <div id="gestureInfo">
+    <h3>Detected: <span id="currentGesture">None</span></h3>
+  </div>
+  <div id="fingerInfo">
+    <div class="finger" id="thumb">
+      <div>Thumb</div>
+      <div class="finger-status" id="thumbStatus">-</div>
+    </div>
+    <div class="finger" id="index">
+      <div>Index</div>
+      <div class="finger-status" id="indexStatus">-</div>
+    </div>
+    <div class="finger" id="middle">
+      <div>Middle</div>
+      <div class="finger-status" id="middleStatus">-</div>
+    </div>
+    <div class="finger" id="ring">
+      <div>Ring</div>
+      <div class="finger-status" id="ringStatus">-</div>
+    </div>
+    <div class="finger" id="pinky">
+      <div>Pinky</div>
+      <div class="finger-status" id="pinkyStatus">-</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script  src="static/script.js"></script>
+
+  </body>
+  
+</html>
